@@ -1,0 +1,40 @@
+{
+  "todos": [
+    {
+      "id": "5fe3f4ca-193c-4170-83c1-cb5a19908601",
+      "title": "Buy food for dinner",
+      "completed": true,
+      "done": true
+    },
+    {
+      "id": "f619466c-a016-4281-b584-7db2795d103d",
+      "title": "Call Marie at 9 PM",
+      "completed": true,
+      "done": true
+    },
+    {
+      "id": "5fe3f4ca-193c-4170-83c1-cb5a19908602",
+      "title": "Write a react blog post",
+      "completed": false,
+      "done": false
+    },
+    {
+      "id": "498a",
+      "title": "Publish a new blog",
+      "done": false,
+      "completed": false
+    },
+    {
+      "id": "f17b",
+      "title": "cook food",
+      "done": false,
+      "completed": false
+    },
+    {
+      "id": "6f25",
+      "title": "eat food",
+      "done": false,
+      "completed": false
+    }
+  ]
+}

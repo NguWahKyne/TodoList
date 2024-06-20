@@ -1,0 +1,322 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
+
+$primary-color: #373780;
+$color_background: #ffffff; 
+$color_container:#f5f5f5;
+$color_progress:#E07C7C;
+$color_White:#ffffff;
+$color_Black:#2b2b2b;
+$color_Purple:#585893;
+$color_Red: #c70e0e;
+$color_beige:#ddd;
+$text_center: center;
+
+body{
+    background-color: $color_background;
+    color: $color_Black;
+    font-family: 'Roboto', sans-serif;
+    margin:8% auto;
+    
+}
+* {
+    box-sizing: border-box;
+    
+  }
+
+.container{
+    background-color: $color_container;
+    width: 620px;
+    padding: 50px;
+    border-radius: 20px;
+    display: grid;
+    place-content: $text_center;
+    margin:0 auto;
+
+    .down-arrow{
+        height: 15px;
+        margin-left: 15px;
+        padding-top: 5px;
+    }
+}
+
+.progress-container{
+    background-color: $color_progress;
+    border-radius: 20px;
+    height: 120px;
+    width: 512px;
+    padding:0px 20px;
+
+    .title-txt{
+        color:$color_White;
+        font-size: 28px;
+        line-height: 32px;
+        font-weight: 500;
+    }
+
+    .progress-bar {
+        width: 100%;
+        background-color: $color_Black;
+        border-radius: 5px;
+        overflow: hidden;
+        margin: 10px 0;
+      }
+      
+      .progress-bar-fill {
+        height: 8px;
+        background-color: $color_White;
+        width: 0;
+        transition: width 0.5s;
+      }
+
+}
+
+.task-title{
+    width: 75%;
+    float: left;
+    padding: 0px 0px;
+
+    h3{
+        font-size: 24px;
+    line-height: 28px;
+    }
+}
+.task-action{
+    width: 25%;
+    float: right;
+    padding: 25px 20px;
+
+    // select {
+    //     padding: 5px;
+    //     font-size: 12px;
+    //     border-radius: 10px;
+    //     border: solid 1px $color_White;
+    //     outline: none;   
+    // }
+
+}
+
+.taskdone{
+    display: flex;
+    align-items: center;
+    padding: 0px 20px;
+    background-color: $color_White;
+    border-radius: 20px;
+    margin-top: 10px;
+}
+
+.add-task {
+  border: 1px solid $color_White;
+  background-color: $color_White;
+  border-radius: 20px;
+  padding: 15px;
+  display: flex;
+  margin-top: 10px;
+
+  input[type='text'] {
+    background: none;
+    color: $color_Black;
+    border: none ;
+    outline: none;
+    padding: 0 8px;
+    display: block;
+    width: 100%;
+    font-size: 16px;
+  }
+
+}
+
+.task {
+  background-color: $color_White;
+  border-radius: 20px;
+  padding: 10px 15px;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  transition: opacity 0.3s linear;
+
+  &.done {
+    text-decoration: line-through;
+    color: $color_beige;
+  }
+
+  ::after{
+    margin:0px;
+}
+svg {
+    height: 20px;
+    margin-right: 5px;
+    fill: $color_Purple;
+  }
+}
+
+div.task-name,
+div.task .add-task {
+  flex-grow: 1;
+}
+
+div.task span {
+  position: relative;
+  font-size: 16px;
+  //line-height: 18px;
+}
+
+div.task span:before {
+  content: '';
+  display: block;
+  width: 0;
+  height: 1px;
+  background-color: $color_beige;
+  position: absolute;
+  //top: 10px;
+  transition: width 0.1s linear;
+}
+
+
+
+div.checkbox {
+  display: flex;
+  align-items: center;
+
+//   svg.checked{
+//     fill:$color_Purple;
+//   }
+}
+
+button.trash {
+  background: none;
+  border: none;
+  display: flex;
+  cursor: pointer;
+}
+
+button.trash svg {
+  fill: $color_Purple;
+  height: 14px;
+}
+
+
+div.task input {
+  border-radius: 5px;
+  padding: 2px 4px;
+}
+
+.icon-button{
+    background: $color_White;
+    border: 0;
+    
+}
+
+.save-button{
+    background: $color_Purple;
+    color: $color_White;
+    padding: 10px;
+    width: 100px;
+    font-size: 14px;
+    border-radius: 20px;
+    border: solid 1px #fff;
+}
+
+// .show-button {
+//     padding:0px !important;
+//     margin:0px !important;
+// }
+.edit-delete-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    position: relative;
+    background: #ffffff;
+    border: 1px solid rgba(252, 246, 246, 0.9607843137);
+    padding: 5px;
+    border-radius: 5px;
+    top: 40px;
+    right: 40px;
+    margin: -20px;
+  }
+
+.edit-button,
+.delete-button {
+    background-color: $color_White;
+    color: $color_Black;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 14px;
+    width: 100%;
+}
+
+.delete-button {
+  color: $color_Red;
+}
+
+.edit-add-task{
+    background-color: white;
+    outline: none;
+    display: flex;
+    padding: 0px !important;
+    margin: 0px!important;
+    width: 100%;
+  
+    input{
+      padding: 0px;
+      margin: 0px !important;
+      outline: none !important;
+      border: none !important;
+      font-size: 16px;
+      display: block;
+      width: 100%;
+    }
+  }
+
+  
+  .edit-add-task {
+    flex: 1;
+    display: flex;
+    align-items: center;
+  }
+  
+  .edit-add-task input {
+    flex: 1;
+    margin-right: 10px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    padding: 5px;
+  }
+  
+  .icon-button, .edit-delete-buttons button {
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  
+  .task.done {
+    opacity: 0.7;
+    text-decoration: line-through;
+  }
+  
+  .task-action button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 14px;
+  }
+  
+
+
+.custom-select {
+    appearance: none; 
+    background-color: $color_White; 
+    padding: 8px 25px; 
+    cursor: pointer; 
+    outline: none;
+    border:none;
+    border-radius: 10px;
+
+   
+  }
+  
+ 
+  
